@@ -1,0 +1,47 @@
+Configuration:
+  status: info
+  monitorInterval: 1800
+
+  Properties:
+    Property:
+      -
+        name: LOG_HOME
+        value: "logs"
+      -
+        name: BACKUP_HOME
+        value: "${LOG_HOME}/backup"
+      -
+        name: STAT_NAME
+        value: stat
+      -
+        name: SERVER_NAME
+        value: csjpapp
+
+  Appenders:
+    Console:
+      name: Console
+      target: SYSTEM_OUT
+      follow: true
+      PatternLayout:
+        charset: UTF-8
+        pattern: "%date{yyyy-MM-dd HH:mm:ss.SSS} %level [%thread][%file:%line] - %msg%n"
+
+    RollingRandomAccessFile:
+      name: ProductLog
+      fileName: "${LOG_HOME}/${SERVER_NAME}"
+      filePattern: "${LOG_HOME}/${SERVER_NAME}.%d{yyyy-MM-dd}.log"
+      PatternLayout:
+        charset: "UTF-8"
+        pattern: "%date{yyyy-MM-dd HH:mm:ss.SSS} %level [%thread][%file:%line] - %msg%n"
+      Policies:
+        TimeBasedTriggeringPolicy:
+          interval: 1
+          modulate: true
+
+  Loggers:
+    Root:
+      level: DEBUG
+      AppenderRef:
+        ref: ProductLog
+      AppenderRef:
+        ref: Console

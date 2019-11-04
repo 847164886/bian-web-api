@@ -1,0 +1,8 @@
+<meta charset="UTF-8">
+<meta content="telephone=no, address=no" name="format-detection">
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+<meta name="viewport" content="initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+<link href="${cssPath}/index/v1/base.css" rel="stylesheet">
+<script>!function(a,b){var c=document.documentElement,d="orientationchange"in window?"orientationchange":"resize",e=function(){var a=c.clientWidth;a>640&&(a=640),c.style.fontSize=100*(a/750)+"px"};e(),a.addEventListener&&b.addEventListener(d,e,!1)}(document,window);</script>
+ 				

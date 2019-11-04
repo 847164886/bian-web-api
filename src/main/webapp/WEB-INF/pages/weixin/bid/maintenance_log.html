@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    #parse("./common/head_v1.vm")
+    <title> 维修保养记录 </title>
+    <link rel="stylesheet" type="text/css" href="${cssPath}/reset.css"/>
+    <link rel="stylesheet" type="text/css" href="${cssPath}/weixin/bid/maintenance_log.css"/>
+</head>
+<body>
+<div class="content">
+    <div class="top_title top_title_grey">
+        <a class="go_back" href="javascript:window.history.go(-1);"></a>
+        <a class="title_tt">维修保养记录</a>
+    </div>
+    <div class="ml_box">
+        <div class="box_1">
+            <div class="car_name_div">$!{data.brand}</div>
+            <ul class="car_xx">
+                <li style="width:100%;">
+                    <div class="xx_left">
+                        车架号：<span>$!{data.vin}</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="xx_left">
+                        排量：<span>$!{data.displacement}</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="xx_left">
+                        变速器：<span>$!{data.gearbox}</span>
+                    </div>
+                </li>
+            </ul>
+            <div class="car_time_div">最后入店时间：<span>$!{data.firstItem.repairDate}</span></div>
+        </div>
+        <div class="box_2">
+        	#if($!{data.firstItem})
+            <div class="by_item first">
+                <div class="by_right">
+                    <div class="by_title">$!{data.firstItem.repairDate}</div>
+                    <div class="by_box">
+                        <div class="by_box_1">
+                            <span class="by_box_1_left">$!{data.firstItem.type}</span>
+                            <span class="by_box_1_right">$!{data.firstItem.mileage}公里</span>
+                        </div>
+                        <div class="by_box_2">
+                            <div class="by_box_2_1">
+                                <div class="by_box_2_left">配件：</div>
+                                <div class="by_box_2_right">$!{data.firstItem.material}</div>
+                            </div>
+                            <div class="by_box_2_1">
+                                <div class="by_box_2_left">描述：</div>
+                                <div class="by_box_2_right">
+                               		$!{data.firstItem.content}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            #end
+            #if($!{data.otherItems})
+            	#foreach($item in ${data.otherItems})
+            <div class="by_item">
+                <div class="by_right">
+                    <div class="by_title">$!{item.repairDate}</div>
+                    <div class="by_box">
+                        <div class="by_box_1">
+                            <span class="by_box_1_left">$!{item.type}</span>
+                            <span class="by_box_1_right">$!{item.mileage}公里</span>
+                        </div>
+                        <div class="by_box_2">
+                            <div class="by_box_2_1">
+                                <div class="by_box_2_left">配件：</div>
+                                <div class="by_box_2_right">$!{item.material}</div>
+                            </div>
+                            <div class="by_box_2_1">
+                                <div class="by_box_2_left">描述：</div>
+                                <div class="by_box_2_right">
+                                	$!{item.content}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            	#end
+            #end
+        </div>
+    </div>
+    #parse("./common/footer.html")
+</div>
+<script type="text/javascript" src="$!{jsPath}/zepto.js"></script>
+<script src="$!{jsPath}/index/v1/base.js"></script>
+<script src="${jsPath}/index/v2/base64.js"></script>
+</body>
+</html>

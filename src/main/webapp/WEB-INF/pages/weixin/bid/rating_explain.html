@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    #parse("./common/head_v1.vm")
+    <title> 评级说明 </title>
+    <link rel="stylesheet" type="text/css" href="${cssPath}/reset.css"/>
+    <link rel="stylesheet" type="text/css" href="${cssPath}/weixin/bid/rating_explain.css"/>
+</head>
+<body>
+<div class="content">
+    <div class="top_title top_title_grey">
+        <a class="go_back" href="javascript:window.history.go(-1);"></a>
+        <a class="title_tt">评级说明</a>
+    </div>
+    <div class="content_arc">
+        <div class="title2">一级</div>
+        <div class="text2">
+            车况描述： </div>
+        <div class="text2">满足使用年限一年内（12个月以内），且公里数小于20000公里的准新车。</div>
+        <div class="text2">车身无明显凹痕划痕做漆，无钣金，发动机工作正常，所有设备均正常工作，缸体表面无渗漏油，内饰正常。</div>
+        <br>
+
+        <div class="title2">二级</div>
+        <div class="text2">
+            车况描述： </div>
+        <div class="text2">使用年限在3年内（36个月以内），且公里数小于50000公里。允许（除前后保）外观有局部做漆（不超过2个面）质量较好，少量划痕，无事故，发动机工作正常，机体表面轻微渗油情况，电子设备均正常工作。</div>
+        <br>
+
+        <div class="title2">三级</div>
+        <div class="text2">
+            车况描述： </div>
+        <div class="text2">使用年限5年内（60个月以内），且公里数小于80000公里。允许（除前后保）外观不超过4个面的喷漆面积（油漆质量良好，无色差、挂流）无严重碰撞，车身表面允许有少量划痕和凹陷，发动机工作正常且无异响，缸体表面允许有渗油情况，电子设备无明显故障。</div>
+        <br>
+
+        <div class="title2">四级</div>
+        <div class="text2">
+            车况描述： </div>
+        <div class="text2">使用年限8年内（96个月以内），且公里数小于150000公里，允许不超过2个面钣金或6个面的喷漆面积，且无严重碰撞，允许有多处凹痕划痕，发动机工作正常，缸体表面允许有渗油情况，电子设备无明显故障。</div>
+        <br>
+
+        <div class="title2">五级</div>
+        <div class="text2">
+            车况描述： </div>
+        <div class="text2">使用年限10年（120个月以内），且公里数小于200000公里，允许有多处划痕凹坑，不超过8个面做漆或4个面整形，发动机工作正常，缸体表面允许有渗油情况，电子设备无明显故障，车辆操控正常。</div>
+        <br>
+
+        <div class="title2">六级</div>
+        <div class="text2">
+            车况描述： </div>
+        <div class="text2">使用年限10年以上（120个月以上），且公里数超过200000公里，允许整车做漆或局部整形、内饰有破损，发动机表面渗油或电子设备能间接性异常，车辆操控无明显异常。</div>
+
+    </div>
+
+    #parse("./common/footer.html")
+</div>
+<script type="text/javascript" src="$!{jsPath}/zepto.js"></script>
+<script src="$!{jsPath}/index/v1/base.js"></script>
+</body>
+</html>

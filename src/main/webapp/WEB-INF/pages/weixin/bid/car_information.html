@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    #parse("./common/head_v1.vm")
+    <title> 基本信息 </title>
+    <link rel="stylesheet" type="text/css" href="${cssPath}/reset.css"/>
+    <link rel="stylesheet" type="text/css" href="${cssPath}/weixin/bid/car_information.css"/>
+</head>
+<body>
+<div class="content">
+    <div class="top_title top_title_grey">
+        <a class="go_back" href="javascript:window.history.go(-1);"></a>
+        <a class="title_tt">基本信息</a>
+    </div>
+    <div class="ci_box">
+        <ul class="car_xx">
+            <li>
+                <div class="xx_left">
+                    生产厂家：<span>$!data.checkCarBaseInfoPojo.factory_name</span>
+                </div>
+            </li>
+            <li>
+                <div class="xx_left">
+                    车型系列：<span>$!data.checkCarBaseInfoPojo.series_name</span>
+                </div>
+            </li>
+            <li>
+                <div class="xx_left">
+                    表显里程：<span>$!data.checkCarBaseInfoPojo.drive_km 公里</span>
+                </div>
+            </li>
+            <li>
+                <div class="xx_left">
+                    生产年份：<span>$dateUtil.formate($!data.checkCarBaseInfoPojo.product_date,'yyyy年MM月')</span>
+                </div>
+            </li>
+        </ul>
+        <div class="car_xing">
+            <div class="car_xing_title">车型：</div>
+            <div class="car_xing_text">
+            $!data.checkCarBaseInfoPojo.factory_name    $!data.checkCarBaseInfoPojo.series_name $!data.checkCarBaseInfoPojo.model_name $!data.checkCarBaseInfoPojo.body_structure $!data.checkCarBaseInfoPojo.gearbox $!data.checkCarBaseInfoPojo.engine_supply_mode $!data.checkCarBaseInfoPojo.engine_ai_form
+            </div>
+        </div>
+        <div class="car_xing">
+            <div class="car_xing_title">详细配置：</div>
+            <ul class="pei_zhi">
+		     #foreach($member in $!baseInfo.entrySet())
+		       <li>$member.key</li>
+		     #end 
+            </ul>
+        </div>
+        <div class="car_jia">
+            车架号VIN码：<span>$!data.checkCarBaseInfoPojo.vin_number</span>
+        </div>
+        <ul class="car_xx">
+            <li>
+                <div class="xx_left">
+                    自增配置：<span>$!data.checkCarBaseInfoPojo.other_inc</span>
+                </div>
+            </li>
+            <li>
+                <div class="xx_left">
+                    备胎：<span>$!data.checkCarBaseInfoPojo.spare_tire</span>
+                </div>
+            </li>
+            <li>
+                <div class="xx_left">
+                    随车工具：<span>#if($!data.checkCarBaseInfoPojo.follow_tool)$!data.checkCarBaseInfoPojo.follow_tool#end#if(!$!data.checkCarBaseInfoPojo.follow_tool)无#end</span>
+                </div>
+            </li>
+            <li>
+                <div class="xx_left">
+                    普通钥匙：<span>$!data.checkCarBaseInfoPojo.common_key</span>
+                </div>
+            </li>
+            <li>
+                <div class="xx_left">
+                    遥控钥匙：<span>$!data.checkCarBaseInfoPojo.control_key</span>
+                </div>
+            </li>
+            <li>
+                <div class="xx_left">
+                    智能钥匙：<span>$!data.checkCarBaseInfoPojo.intelligent_key</span>
+                </div>
+            </li>
+            <li>
+                <div class="xx_left">
+                    外观颜色：<span>$!data.checkCarBaseInfoPojo.outer_color</span>
+                </div>
+            </li>
+            <li>
+                <div class="xx_left">
+                    内饰颜色：<span>$!data.checkCarBaseInfoPojo.inner_color</span>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <input type="hidden" id="auction_id" value="$!{auction_id}"/>
+    <input type="hidden" id="check_car_id" value="$!{check_car_id}"/>
+    <input type="hidden" id="isover_num" value="$!{isover}">
+    #parse("./common/footer.html")
+</div>
+<script type="text/javascript" src="$!{jsPath}/zepto.js"></script>
+<script src="$!{jsPath}/index/v1/base.js"></script>
+<script src="${jsPath}/index/v2/base64.js"></script>
+</body>
+</html>

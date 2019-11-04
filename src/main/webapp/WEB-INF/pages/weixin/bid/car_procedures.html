@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    #parse("./common/head_v1.vm")
+    <title> 车辆手续 </title>
+    <link rel="stylesheet" type="text/css" href="${cssPath}/reset.css"/>
+    <link rel="stylesheet" type="text/css" href="${cssPath}/weixin/bid/car_procedures.css"/>
+</head>
+<body>
+<div class="content">
+    <div class="top_title top_title_grey">
+        <a class="go_back" href="javascript:window.history.go(-1);"></a>
+        <a class="title_tt">车辆手续</a>
+    </div>
+    <ul class="brief_info clearfix">
+        <li>登记年月 <span>$dateUtil.formate($!data.checkCarProcedurePojo.first_register,'yyyy/MM/dd')</span></li>
+        <li>年检到期 <span>$dateUtil.formate($!data.checkCarProcedurePojo.expires_date,'yyyy/MM/dd')</span></li>
+        <li>牌照所在地 <span>$!data.checkCarProcedurePojo.plate_city</span></li>
+        <li>使用性质 <span>$!data.checkCarProcedurePojo.use_property</span></li>
+        <li>转籍 <span>$!data.checkCarProcedurePojo.transfer</span></li>
+    </ul>
+    <ul class="detail_info clearfix">
+        <li class="report_bb">证件手续：</li>
+        <li>
+            <div class="detail_left">
+                交强险有效期
+            </div>
+            <div class="detail_right">
+            $dateUtil.formate($!data.checkCarProcedurePojo.insure_date,'yyyy/MM/dd')
+            </div>
+        </li>
+        <li>
+            <div class="detail_left">
+                产证变更记录
+            </div>
+            <div class="detail_right">
+$!data.checkCarProcedurePojo.property_change
+            </div>
+        </li>
+        <li>
+            <div class="detail_left">
+                车辆产证曾属租赁
+            </div>
+            <div class="detail_right">
+$!data.checkCarProcedurePojo.property_lease
+            </div>
+        </li>
+        <li>
+            <div class="detail_left">
+                购置税完税证明
+            </div>
+            <div class="detail_right">
+$!data.checkCarProcedurePojo.buy_tax
+            </div>
+        </li>
+        <li>
+            <div class="detail_left">
+                行驶证
+            </div>
+            <div class="detail_right">
+$!data.checkCarProcedurePojo.drive_license
+            </div>
+        </li>
+
+        <li>
+            <div class="detail_left">
+                排放标准：（取自环保网，仅供参考）
+            </div>
+            <div class="detail_right">
+$!data.checkCarProcedurePojo.discharge_level
+            </div>
+        </li>
+                <li>
+            <div class="detail_left">
+                车主当地户籍
+            </div>
+            <div class="detail_right">
+$!data.checkCarProcedurePojo.master_register
+            </div>
+        </li>
+        <li>
+            <div class="detail_left">
+                带额度出售
+            </div>
+            <div class="detail_right">
+$!data.checkCarProcedurePojo.quantity_sell
+            </div>
+        </li>
+        <li>
+            <div class="detail_left">
+                车牌状态
+            </div>
+            <div class="detail_right">
+$!data.checkCarProcedurePojo.plate_status
+            </div>
+        </li>
+        <li>
+            <div class="detail_left">
+                强制报废年限
+            </div>
+            <div class="detail_right">
+             $dateUtil.formate($!data.checkCarProcedurePojo.invalid_date,'yyyy/MM/dd')
+            </div>
+        </li>
+        <li>
+            <div class="detail_left">
+                车主类型
+            </div>
+            <div class="detail_right">
+$!data.checkCarProcedurePojo.master_info
+            </div>
+        </li>
+        <li>
+            <div class="detail_left">
+                车辆使用说明书
+            </div>
+            <div class="detail_right">
+$!data.checkCarProcedurePojo.use_instruction
+            </div>
+        </li>
+        <li>
+            <div class="detail_left">
+                车辆保养手册
+            </div>
+            <div class="detail_right">
+$!data.checkCarProcedurePojo.protect_instruction
+            </div>
+        </li>
+        <li>
+            <div class="detail_left">
+                过户次数
+            </div>
+            <div class="detail_right">
+$!data.checkCarProcedurePojo.transfer_times
+            </div>
+        </li>
+    </ul>
+</div>
+</body>
+</html>

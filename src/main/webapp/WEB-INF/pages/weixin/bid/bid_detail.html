@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    #parse("./common/head_v1.vm")
+    <title>$!data.checkCarPojo.brand_name    $!data.checkCarPojo.series_name $!data.checkCarPojo.model_name  </title>
+    <link rel="stylesheet" type="text/css" href="${cssPath}/reset.css"/>
+    <link rel="stylesheet" type="text/css" href="${cssPath}/weixin/bid/bid_detail.css"/>
+</head>
+<body>
+<div class="content">
+    <div class="app_download app-hide">
+        <div class="app_in_close" id="app_in_close"></div>
+        <div class="app_in_logo"></div>
+        <div class="app_in_text">
+            车助手-车商版<br>海量车源任你挑！
+        </div>
+        <div class="app_in_load">
+            <a href="http://web.chezhushou.com/wx/index.html">下载</a>
+        </div>
+    </div>
+    <div class="top_title top_title_grey">
+        <a id="back_img" class="go_back2">相册</a>
+        <a class="title_tt">竞拍详情</a>
+    </div>
+    <div class="slide slide-photos" id="photo_slide">
+        <ul>
+            <!-- 遍历该车的相册图片开始 -->
+            #foreach($picpath in $data.pic_path)
+            <li>
+                <a href="${basePath}/share/car/photo?auction_id=$!data.checkCarPojo.auction_id&check_car_id=$!data.checkCarPojo.check_car_id&amp;num=$!{velocityCount}">
+                    <img src="$!picpath">
+                </a>
+            </li>
+            #end
+        </ul>
+        <div class="num_pics"></div>
+        <div id="show_video" class="video_img"></div>
+    </div>
+    <div id="video" class="video">
+        <input type="hidden" id="isVideo" value="${data.vcr_path}">
+        #if(!${data.vcr_path})
+        <video src="${vcrPath}/${data.vcr_path}" preload="preload" controls="controls"></video>
+        <!--<div id="back_img" class="back_img"></div>-->
+        #end
+    </div>
+    <div class="countdown_box clearfix">
+        <div class="cut_time">
+            <p class="p1">截止时间</p>
+            <p class="p2">$dateUtil.formate($!data.end_time,'yyyy/MM/dd HH:mm:ss')</p>
+        </div>
+        <div class="countdown">
+            <p>距竞拍结束仅剩</p>
+            <input id="countSeconds" type="hidden" value="$!data.end_time.getTime()">
+            <div class="countdown_time clearfix">
+                <div class="countdown_time_s" id="seconds"></div>
+                <div class="countdown_time_m" id="minutes"></div>
+                <div class="countdown_time_h" id="hours"></div>
+            </div>
+        </div>
+    </div>
+    <div class="car_detail_1">
+        <input id="carMsg" type="hidden" value="$!data.checkCarPojo.series_name $!data.checkCarPojo.model_name">
+        <a class="car_name" id="car_name" href="${basePath}/share/car/info?auction_id=$!data.checkCarPojo.auction_id&check_car_id=$!data.checkCarPojo.check_car_id">$!data.checkCarPojo.brand_name $!data.checkCarPojo.series_name $!data.checkCarPojo.model_name $!data.checkCarPojo.body_structure $!data.checkCarPojo.gearbox $!data.checkCarPojo.engine_supply_mode $!data.checkCarPojo.engine_ai_form</a>
+        <div class="car_serve">
+            <div class="car_serve_2">
+                <span class="car_serve_span_1"><i id="regist">$dateUtil.formate($!data.checkCarPojo.first_register,'yyyy/MM/dd')</i>登记</span>
+                <span class="car_serve_span_2"><i id="mileage">$!data.checkCarPojo.drive_km_single</i> 公里表显里程</span>
+            </div>
+            <!--             <div class="ping_fen"> -->
+            <!--                 <div class="pf_title">评分</div> -->
+            <!--                 <div class="pf_fen">$!data.checkOrderPojo.check_score</div> -->
+            <!--             </div> -->
+        </div>
+        <!--车辆手续-->
+        <div class="car_rate clearfix">
+            <div class="car_rate_left">
+                车辆手续
+            </div>
+            <a href="${basePath}/share/car/procedures?auction_id=$!data.checkCarPojo.auction_id&check_car_id=$!data.checkCarPojo.check_car_id">
+                <div class="car_rate_right">
+                    查看更多
+                </div>
+            </a>
+        </div>
+        <ul class="bid_car_report">
+            <li>
+                <div class="report_left">
+                    登记年月
+                </div>
+                <div class="report_right">
+                    $dateUtil.formate($!data.checkCarPojo.first_register,'yyyy/MM/dd')
+                </div>
+            </li>
+            <li>
+                <div class="report_left">
+                    年检有效期
+                </div>
+                <div class="report_right">
+                    $dateUtil.formate($!data.checkCarPojo.expires_date,'yyyy/MM/dd')
+                </div>
+            </li>
+            <li>
+                <div class="report_left">
+                    牌照所在地
+                </div>
+                <div class="report_right">
+                    $!data.checkCarPojo.city_name
+                </div>
+            </li>
+        </ul>
+        <!--车辆评级-->
+        <div class="car_rate clearfix">
+            <div class="car_rate_left">
+                车辆评级<span>
+                                #if($!data.checkOrderPojo.check_grade==1)
+                                    一
+                                #elseif($!data.checkOrderPojo.check_grade==2)
+                                 二
+                                #elseif($!data.checkOrderPojo.check_grade==3)
+                                    三
+                                #elseif($!data.checkOrderPojo.check_grade==4)
+                                     四
+                                #elseif($!data.checkOrderPojo.check_grade==5)
+                                     五
+                                #elseif($!data.checkOrderPojo.check_grade==6)
+                                      六
+                                #end级
+                </span>
+            </div>
+            <a href="${basePath}/share/car/declare">
+                <div class="car_rate_right">
+                    评级说明
+                </div>
+            </a>
+        </div>
+        <ul class="bid_car_report bid_car_report_1">
+            <li class="report_bb">总结报告：</li>
+            <li>
+                <div class="report_left">
+                    外观
+                </div>
+                <div class="report_right">
+                    $!data.checkOrderPojo.comment_wg
+                </div>
+            </li>
+            <li>
+                <div class="report_left">
+                    结构
+                </div>
+                <div class="report_right">
+                    $!data.checkOrderPojo.comment_jg
+                </div>
+            </li>
+            <li>
+                <div class="report_left">
+                    机械
+                </div>
+                <div class="report_right">
+                    $!data.checkOrderPojo.comment_jx
+                </div>
+            </li>
+            <li>
+                <div class="report_left">
+                    电气
+                </div>
+                <div class="report_right">
+                    $!data.checkOrderPojo.comment_dq
+                </div>
+            </li>
+            <li>
+                <div class="report_left">
+                    内饰
+                </div>
+                <div class="report_right">
+                    $!data.checkOrderPojo.comment_ns
+                </div>
+            </li>
+            <li>
+                <div class="report_left">
+                    底盘
+                </div>
+                <div class="report_right">
+                    $!data.checkOrderPojo.comment_dp
+                </div>
+            </li>
+            <li>
+                <div class="report_left">
+                    补充
+                </div>
+                <div class="report_right">
+                    $!data.checkOrderPojo.extra
+                </div>
+            </li>
+        </ul>
+
+    </div>
+    <div class="car_damage clearfix">
+        <div class="car_damage_left">车况损伤</div>
+        #if($!photos.waiguan.images.size()>0||$!photos.neishi.images.size()>0||$!photos.jiegou.images.size()>0||$!photos.jixie.images.size()>0||$!photos.dianqi.images.size()>0||$!photos.dipan.images.size()>0)
+        <a class="car_damage_right"  href="${basePath}/share/car/damageDetail?auction_id=$!data.checkCarPojo.auction_id&check_car_id=$!data.checkCarPojo.check_car_id&amp;num=1">查看详情</a>
+        #end
+    </div>
+    <ul class="car_damage_detail clearfix">
+        <li>
+            <div class="damage_1">
+                外观缺陷：
+                <span>$!photos.waiguan.num项</span>
+            </div>
+            <div class="damage_2 #if($!photos.waiguan.images.size()>0)has_img#end">
+                <i></i>
+                <span>$!photos.waiguan.images.size()</span>
+            </div>
+        </li>
+        <li>
+            <div class="damage_1">
+                内饰缺陷：
+                <span>$!photos.neishi.num项</span>
+            </div>
+            <div class="damage_2 #if($!photos.neishi.images.size()>0)has_img#end">
+                <i></i>
+                <span>$!photos.neishi.images.size()</span>
+            </div>
+        </li>
+        <li>
+            <div class="damage_1">
+                结构缺陷：
+                <span>$!photos.jiegou.num项</span>
+            </div>
+            <div class="damage_2 #if($!photos.jiegou.images.size()>0)has_img#end">
+                <i></i>
+                <span>$!photos.jiegou.images.size()</span>
+            </div>
+        </li>
+        <li>
+            <div class="damage_1">
+                机械缺陷：
+                <span>$!photos.jixie.num项</span>
+            </div>
+            <div class="damage_2 #if($!photos.jixie.images.size()>0)has_img#end">
+                <i></i>
+                <span>$!photos.jixie.images.size()</span>
+            </div>
+        </li>
+        <li>
+            <div class="damage_1">
+                电气缺陷：
+                <span>$!photos.dianqi.num项</span>
+            </div>
+            <div class="damage_2 #if($!photos.dianqi.images.size()>0)has_img#end" >
+                <i></i>
+                <span>$!photos.dianqi.images.size()</span>
+            </div>
+        </li>
+        <li>
+            <div class="damage_1">
+                底盘缺陷：
+                <span>$!photos.dipan.num项</span>
+            </div>
+            <div class="damage_2 #if($!photos.dipan.images.size()>0)has_img#end">
+                <i></i>
+                <span>$!photos.dipan.images.size()</span>
+            </div>
+        </li>
+    </ul>
+    <div class="byjl_box clearfix">
+        <div class="car_rate_left">
+            维修保养记录<span>（${maintenanceCount}）</span>
+        </div>
+        #if(${maintenanceCount}>0)
+        <a href="${basePath}/share/car/maintenance/detail?check_car_id=$!data.checkCarPojo.check_car_id" style="color:#000;">
+            <div class="car_rate_right">
+                查看详情
+            </div>
+        </a>
+        #end
+    </div>
+    <div class="byjl_detail">
+        #if(${maintenanceCount}==0)
+        此车不支持维修保养记录查询
+        #end
+        #if(${maintenanceCount}>0)
+        此车有维修保养记录，点击查看详情
+        #end
+    </div>
+    #parse("./common/footer.html")
+    <input type="hidden" id="auction_id" value="$!{auction_id}"/>
+    <input type="hidden" id="check_car_id" value="$!{check_car_id}"/>
+</div>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script type="text/javascript" src="$!{jsPath}/zepto.js"></script>
+<script src="$!{jsPath}/index/v1/base.js"></script>
+<script src="${jsPath}/index/v2/base64.js"></script>
+<script src="$!jsPath/weixin/bid/bid_detail.js"></script>
+</body>
+</html>

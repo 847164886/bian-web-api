@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    #parse("./common/head_v1.vm")
+    <title> 车况损伤 </title>
+    <link rel="stylesheet" type="text/css" href="${cssPath}/reset.css"/>
+    <link rel="stylesheet" type="text/css" href="${cssPath}/weixin/bid/car_damage.css"/>
+</head>
+<body>
+<div class="content">
+    <div class="top_title top_title_grey">
+        <a class="go_back" href="javascript:window.history.go(-1);"></a>
+        <a class="title_tt">车况损伤</a>
+    </div>
+    <div class="da_box">
+    #if($photos.waiguan.itemReports.size()>0)
+        <div class="damage_div">
+            <div class="damage_title">
+                <div class="car_rate_left">
+                    外观缺陷
+                </div>
+            </div>
+            <ul>
+            #foreach($itemReportPojo in $photos.waiguan.itemReports)
+                <li>
+                    <div class="damage_dd_left">
+                       $!itemReportPojo.itemName
+                    </div>
+                    <div class="damage_dd_right">
+            	#foreach($specialReportPojo in $!itemReportPojo.specialReports)
+                        <div class="damage_dd_item">
+                        $!specialReportPojo.specialName 
+                        (#if($!specialReportPojo.specialStatus==1)
+                                    正常
+                                #elseif($!specialReportPojo.specialStatus==2)
+                                 轻微
+                                #elseif($!specialReportPojo.specialStatus==3)
+                                    一般
+                                #elseif($!specialReportPojo.specialStatus==4)
+                                     严重
+                                #end)
+                        </div>
+                #end
+                    </div>
+                    #if($itemReportPojo.picPath)
+                    <a class="damage_img" href="${basePath}/share/car/damagePhoto?type=waiguan&auction_id=$!{auction_id}&check_car_id=$!{check_car_id}&amp;num=1&itemId=$!{itemReportPojo.itemId}"></a>
+                    #end
+                </li>
+                #end
+            </ul>
+        </div>
+        #end
+         #if($photos.neishi.itemReports.size()>0)
+        <div class="damage_div">
+            <div class="damage_title">
+                <div class="car_rate_left">
+                    内饰缺陷
+                </div>
+            </div>
+            <ul>
+                      #foreach($itemReportPojo in $photos.neishi.itemReports)
+                <li>
+                    <div class="damage_dd_left">
+                       $!itemReportPojo.itemName
+                    </div>
+                    <div class="damage_dd_right">
+            	#foreach($specialReportPojo in $!itemReportPojo.specialReports)
+                        <div class="damage_dd_item">
+                        $!specialReportPojo.specialName
+                                     (#if($!specialReportPojo.specialStatus==1)
+                                    正常
+                                #elseif($!specialReportPojo.specialStatus==2)
+                                 轻微
+                                #elseif($!specialReportPojo.specialStatus==3)
+                                    一般
+                                #elseif($!specialReportPojo.specialStatus==4)
+                                     严重
+                                #end)
+                        </div>
+                #end
+                    </div>
+                   #if($itemReportPojo.picPath)
+                    <a class="damage_img" href="${basePath}/share/car/damagePhoto?type=neishi&auction_id=$!{auction_id}&check_car_id=$!{check_car_id}&amp;num=1&itemId=$!{itemReportPojo.itemId}"></a>
+                    #end
+                </li>
+                #end
+            </ul>
+        </div>
+        #end
+         #if($photos.jiegou.itemReports.size()>0)
+        <div class="damage_div">
+            <div class="damage_title">
+                <div class="car_rate_left">
+                   	结构缺陷
+                </div>
+            </div>
+            <ul>
+                        #foreach($itemReportPojo in $photos.jiegou.itemReports)
+                <li>
+                    <div class="damage_dd_left">
+                       $!itemReportPojo.itemName
+                    </div>
+                    <div class="damage_dd_right">
+            	#foreach($specialReportPojo in $!itemReportPojo.specialReports)
+                        <div class="damage_dd_item">
+                        $!specialReportPojo.specialName             (#if($!specialReportPojo.specialStatus==1)
+                                    正常
+                                #elseif($!specialReportPojo.specialStatus==2)
+                                 轻微
+                                #elseif($!specialReportPojo.specialStatus==3)
+                                    一般
+                                #elseif($!specialReportPojo.specialStatus==4)
+                                     严重
+                                #end)
+                        </div>
+                #end
+                    </div>
+                    #if($itemReportPojo.picPath)
+                    <a class="damage_img" href="${basePath}/share/car/damagePhoto?type=jiegou&auction_id=$!{auction_id}&check_car_id=$!{check_car_id}&amp;num=1&itemId=$!{itemReportPojo.itemId}"></a>
+                           #end
+                </li>
+                #end
+            </ul>
+        </div>
+        #end
+         #if($photos.jixie.itemReports.size()>0)
+        <div class="damage_div">
+            <div class="damage_title">
+                <div class="car_rate_left">
+                    机械缺陷
+                </div>
+            </div>
+            <ul>
+                        #foreach($itemReportPojo in $photos.jixie.itemReports)
+                <li>
+                    <div class="damage_dd_left">
+                       $!itemReportPojo.itemName
+                    </div>
+                    <div class="damage_dd_right">
+            	#foreach($specialReportPojo in $!itemReportPojo.specialReports)
+                        <div class="damage_dd_item">
+                        $!specialReportPojo.specialName              (#if($!specialReportPojo.specialStatus==1)
+                                    正常
+                                #elseif($!specialReportPojo.specialStatus==2)
+                                 轻微
+                                #elseif($!specialReportPojo.specialStatus==3)
+                                    一般
+                                #elseif($!specialReportPojo.specialStatus==4)
+                                     严重
+                                #end)
+                        </div>
+                #end
+                    </div>
+                    #if($itemReportPojo.picPath)
+                    <a class="damage_img" href="${basePath}/share/car/damagePhoto?type=jixie&auction_id=$!{auction_id}&check_car_id=$!{check_car_id}&amp;num=1&itemId=$!{itemReportPojo.itemId}"></a>
+                           #end
+                </li>
+                #end
+            </ul>
+        </div>
+          #end
+         #if($photos.dianqi.itemReports.size()>0)      
+        <div class="damage_div">
+            <div class="damage_title">
+                <div class="car_rate_left">
+                    电气缺陷
+                </div>
+            </div>
+            <ul>
+                        #foreach($itemReportPojo in $photos.dianqi.itemReports)
+                <li>
+                    <div class="damage_dd_left">
+                       $!itemReportPojo.itemName
+                    </div>
+                    <div class="damage_dd_right">
+            	#foreach($specialReportPojo in $!itemReportPojo.specialReports)
+                        <div class="damage_dd_item">
+                        $!specialReportPojo.specialName             (#if($!specialReportPojo.specialStatus==1)
+                                    正常
+                                #elseif($!specialReportPojo.specialStatus==2)
+                                 轻微
+                                #elseif($!specialReportPojo.specialStatus==3)
+                                    一般
+                                #elseif($!specialReportPojo.specialStatus==4)
+                                     严重
+                                #end)
+                        </div>
+                #end
+                    </div>
+                    #if($itemReportPojo.picPath)
+                    <a class="damage_img" href="${basePath}/share/car/damagePhoto?type=dianqi&auction_id=$!{auction_id}&check_car_id=$!{check_car_id}&amp;num=1&itemId=$!{itemReportPojo.itemId}"></a>
+                           #end
+                </li>
+                #end
+            </ul>
+        </div>
+                #end
+         #if($photos.dipan.itemReports.size()>0)
+        <div class="damage_div">
+            <div class="damage_title">
+                <div class="car_rate_left">
+                    底盘缺陷
+                </div>
+            </div>
+            <ul>
+                        #foreach($itemReportPojo in $photos.dipan.itemReports)
+                <li>
+                    <div class="damage_dd_left">
+                       $!itemReportPojo.itemName
+                    </div>
+                    <div class="damage_dd_right">
+            	#foreach($specialReportPojo in $!itemReportPojo.specialReports)
+                        <div class="damage_dd_item">
+                        $!specialReportPojo.specialName             (#if($!specialReportPojo.specialStatus==1)
+                                    正常
+                                #elseif($!specialReportPojo.specialStatus==2)
+                                 轻微
+                                #elseif($!specialReportPojo.specialStatus==3)
+                                    一般
+                                #elseif($!specialReportPojo.specialStatus==4)
+                                     严重
+                                #end)
+                        </div>
+                #end
+                    </div>
+                    #if($itemReportPojo.picPath)
+                    <a class="damage_img" href="${basePath}/share/car/damagePhoto?type=dipan&auction_id=$!{auction_id}&check_car_id=$!{check_car_id}&amp;num=1&itemId=$!{itemReportPojo.itemId}"></a>
+                           #end
+                </li>
+                #end
+            </ul>
+        </div>
+                #end
+    </div>
+    <input type="hidden" id="auction_id" value="$!{auction_id}"/>
+    <input type="hidden" id="check_car_id" value="$!{check_car_id}"/>
+    <input type="hidden" id="isover_num" value="$!{isover}">
+    #parse("./common/footer.html")
+</div>
+<script type="text/javascript" src="$!{jsPath}/zepto.js"></script>
+<script src="$!{jsPath}/index/v1/base.js"></script>
+<script src="${jsPath}/index/v2/base64.js"></script>
+<script src="$!jsPath/weixin/bid/car_damage.js"></script>
+</body>
+</html>

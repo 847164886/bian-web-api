@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    #parse("./common/head_v1.vm")
+    <title>车辆相册</title>
+    <link rel="stylesheet" type="text/css" href="${cssPath}/weixin/bid/bid_photos.css"/>
+</head>
+<body>
+<div class="content" style="margin-top: 0">
+    <div class="jc-mask"></div>
+    <div class="jc-infophoto">
+        <a class="go_back" href="javascript:window.history.go(-1);"></a>
+        <div class="ct-pics slide">
+            <ul>
+            #if($!{mains}==1)
+	            #foreach($photo in  $photos)
+	                <li><img src="$!photo"> <span class="des"></span>
+	                </li>
+	            #end
+            #end
+            #if($!{mains}!=1)
+	            #foreach($photo in  $photos)
+	                <li><div class="pic_name">$!photo.itemName</div><img src="$!photo.picPath"> <span class="des"></span>
+	                </li>
+	            #end
+            #end
+            </ul>
+            <div class="num"></div>
+        </div>
+    </div>
+    <input type="hidden" id="photo_nun" value="$!{num}">
+</div>
+<!-- m 站公共尾开始 -->
+<script type="text/javascript" src="$!{jsPath}/zepto.js"></script>
+<script src="$!{jsPath}/weixin/bid/bid_photos.js"></script>
+<!-- m 站公共尾开始 -->
+</body>
+</html>

@@ -1,0 +1,746 @@
+.top_title {
+  height: 48px;
+  width: 100%;
+  background-color: #03a4fc;
+  position: relative;
+}
+.top_title.top_title_grey {
+  background-color: #f5f5f5;
+}
+.top_title.top_title_grey .title_tt {
+  color: #03a4fc;
+}
+.top_title .go_back {
+  width: 30px;
+  height: 30px;
+  background: url("../../../images/weixin/bid/icon_back_blue.png") center no-repeat;
+  background-size: 100%;
+  position: absolute;
+  left: 10px;
+  top: 9px;
+}
+.top_title .title_tt {
+  font-size: 18px;
+  color: #ffffff;
+  width: 60%;
+  height: 48px;
+  line-height: 48px;
+  text-align: center;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin-left: -30%;
+}
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.app_download {
+  width: 100%;
+  height: 64px;
+  background: rgba(0, 0, 0, 0.7);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+}
+.app_download .app_in_close {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: url("../../../images/weixin/bid/delete_icon_1_bf458b.png") no-repeat center;
+  background-size: 100%;
+}
+.app_download .app_in_logo {
+  position: absolute;
+  left: 20px;
+  top: 8px;
+  width: 48px;
+  height: 48px;
+  border-radius: 5px;
+  background: url("../../../images/weixin/bid/logo1.png") no-repeat center;
+  background-size: 100%;
+}
+.app_download .app_in_text {
+  position: absolute;
+  font-size: 14px;
+  left: 80px;
+  top: 13px;
+  color: #fff;
+}
+.app_download .app_in_load {
+  position: absolute;
+  right: 10px;
+  top: 17px;
+  width: 82px;
+  height: 30px;
+  background: #03A2FC;
+  border-radius: 15px;
+  text-align: center;
+  line-height: 30px;
+  color: #fff;
+}
+.app_download .app_in_load a {
+  color: #fff;
+}
+.top_title {
+  height: 48px;
+  width: 100%;
+  background-color: #03a4fc;
+  position: relative;
+}
+.top_title .title_tt {
+  font-size: 18px;
+  color: #ffffff;
+  width: 60%;
+  height: 48px;
+  line-height: 48px;
+  text-align: center;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin-left: -30%;
+}
+.top_title .go_back2 {
+  display: none;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  font-size: 15px;
+  color: #03a4fc;
+  background-size: 100%;
+  position: absolute;
+  left: 10px;
+  top: 9px;
+}
+.top_title_grey {
+  background-color: #fff !important;
+  border-bottom: 1px solid #eee;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+.top_title_grey .title_tt {
+  color: #03a4fc;
+}
+.content {
+  overflow: hidden;
+  margin-top: 0;
+  padding-bottom: 20px;
+}
+.content .slide {
+  margin-top: 48px;
+  height: 5rem;
+}
+.content .slide .num_pics {
+  position: absolute;
+  left: 0.32rem;
+  bottom: 0.2rem;
+  background-color: rgba(0, 0, 0, 0.3);
+  color: #fff;
+  font-size: 15px;
+  line-height: 20px;
+  padding: 5px 10px ;
+  border-radius: 4px;
+  z-index: 2;
+}
+.content .slide .video_img {
+  display: none;
+  width: .9rem;
+  height: .9rem;
+  position: absolute;
+  right: .2rem;
+  bottom: .2rem;
+  background: url("../../../images/weixin/bid/play_button@2x.png") no-repeat center;
+  background-size: 100%;
+}
+.content .video {
+  display: none;
+  margin-top: 48px;
+  width: 100%;
+  height: 5rem;
+  position: relative;
+}
+.content .video video {
+  width: 100%;
+  height: 5rem;
+}
+.content .video .back_img {
+  position: absolute;
+  left: 0.2rem;
+  top: 0.2rem;
+  width: 1.1rem;
+  height: .6rem;
+  background: url("../../../images/weixin/bid/icon_back_img.png") no-repeat center;
+  background-size: 100%;
+  color: #fff;
+  z-index: 9999;
+}
+.content .slide-photos ul li a {
+  display: block;
+  max-width: 7.5rem;
+  height: 5rem;
+}
+.content .slide-photos ul li a img {
+  max-width: 7.5rem;
+  height: 100%;
+}
+.content .countdown_box {
+  display: none;
+  height: 50px;
+}
+.content .countdown_box .cut_time {
+  float: left;
+  width: 55%;
+  height: 50px;
+  background-color: #03a2fc;
+  padding-left: 10px;
+  position: relative;
+}
+.content .countdown_box .cut_time:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: -16px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-color: transparent transparent transparent #03a2fc;
+  border-width: 25px 1px 25px 15px;
+}
+.content .countdown_box .cut_time .p1 {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.5);
+  margin: 6px 0 1px;
+}
+.content .countdown_box .cut_time .p2 {
+  font-size: 16px;
+  color: #ffffff;
+}
+.content .countdown_box .countdown {
+  float: left;
+  width: 45%;
+  height: 50px;
+  background-color: #09d4ff;
+  padding-right: 15px;
+}
+.content .countdown_box .countdown p {
+  font-size: 12px;
+  color: #ffffff;
+  text-align: right;
+  margin: 4px 15px 2px 0;
+}
+.content .countdown_box .countdown .countdown_time > div {
+  float: right;
+  width: 24px;
+  height: 24px;
+  text-align: center;
+  line-height: 24px;
+  background: url("../../../images/weixin/bid/bg_time_blue.png") no-repeat center;
+  background-size: 100%;
+  color: #ffffff;
+  margin-left: 13px;
+  font-size: 14px;
+  position: relative;
+}
+.content .countdown_box .countdown .countdown_time > div:after {
+  position: absolute;
+  content: ':';
+  color: #ffffff;
+  font-size: 16px;
+  top: -1px;
+  right: -8px;
+}
+.content .countdown_box .countdown .countdown_time .time_over {
+  background: url("../../../images/weixin/bid/bg_time_red.png") no-repeat center;
+  background-size: 100%;
+}
+.content .countdown_box .countdown .countdown_time .countdown_time_s:after {
+  content: '';
+}
+.content .highest_notice {
+  background-color: #fdfbe0;
+  padding: 8px 10px;
+}
+.content .highest_notice .notice_title {
+  color: #b2b2b2;
+  font-size: 12px;
+}
+.content .highest_notice .notice_detail {
+  font-size: 12px;
+  color: #393939;
+  margin-top: 2px;
+}
+.content .highest_notice .notice_detail span {
+  color: #fa3e5d;
+  font-size: 14px;
+}
+.content .highest_notice .fwf_div {
+  font-size: 12px;
+  color: #393939;
+}
+.content .highest_notice .fwf_div span {
+  color: #03a2fc;
+}
+.content .car_detail_1 {
+  background-color: #ffffff;
+}
+.content .car_detail_1 .car_name {
+  padding: 15px 45px 15px 10px;
+  font-size: 16px;
+  color: #393939;
+  display: block;
+  border-bottom: 1px solid #EEEEEE;
+  position: relative;
+}
+.content .car_detail_1 .car_name:after {
+  width: 10px;
+  height: 18px;
+  content: '';
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  right: 10px;
+  background: url("../../../images/weixin/bid/icon_arrow_next_gray.png") no-repeat center;
+  -webkit-background-size: 100%;
+  background-size: 100%;
+}
+.content .car_detail_1 .car_serve {
+  font-size: 13px;
+  padding: 15px 0 15px 10px;
+  position: relative;
+}
+.content .car_detail_1 .car_serve .car_serve_1 {
+  color: #fa3e5d;
+  padding-left: 20px;
+  background: url("../../../images/weixin/bid/icon_pay_red.png") left center no-repeat;
+  background-size: 14px;
+}
+.content .car_detail_1 .car_serve .car_serve_2 {
+  color: #7a7a7a;
+  margin-top: 10px;
+}
+.content .car_detail_1 .car_serve .car_serve_2 span {
+  padding-left: 20px;
+  margin-right: 15px;
+  font-size: 12px;
+}
+.content .car_detail_1 .car_serve .car_serve_2 .car_serve_span_1 {
+  background: url("../../../images/weixin/bid/icon_shangpai.png") left center no-repeat;
+  background-size: 14px;
+}
+.content .car_detail_1 .car_serve .car_serve_2 .car_serve_span_1 i {
+  font-style: normal;
+}
+.content .car_detail_1 .car_serve .car_serve_2 .car_serve_span_2 {
+  background: url("../../../images/weixin/bid/icon_licheng.png") left center no-repeat;
+  background-size: 14px;
+}
+.content .car_detail_1 .car_serve .ping_fen {
+  position: absolute;
+  top: 15px;
+  right: 0;
+  width: 70px;
+  height: 50px ;
+  padding-left: 10px;
+}
+.content .car_detail_1 .car_serve .ping_fen:before {
+  position: absolute;
+  content: '';
+  top: 5px;
+  left: 5px;
+  width: 1px;
+  height: 30px;
+  background-color: #ededed;
+}
+.content .car_detail_1 .car_serve .ping_fen .pf_title {
+  font-size: 12px;
+  color: #7a7a7a;
+  text-align: center;
+  margin-bottom: 6px;
+}
+.content .car_detail_1 .car_serve .ping_fen .pf_fen {
+  font-size: 18px;
+  color: #fa3e5d;
+  text-align: center;
+}
+.content .car_detail_1 .car_rate {
+  height: 40px;
+  line-height: 40px;
+  background-color: #f3f3ee;
+  padding: 0 10px;
+}
+.content .car_detail_1 .car_rate .car_rate_left {
+  float: left;
+  font-size: 14px;
+  color: #393939;
+  padding-left: 15px;
+  position: relative;
+}
+.content .car_detail_1 .car_rate .car_rate_left:before {
+  content: '';
+  position: absolute;
+  top: 13px;
+  left: 5px;
+  width: 4px;
+  height: 15px;
+  background-color: #03a2fc;
+  border-radius: 2px;
+}
+.content .car_detail_1 .car_rate .car_rate_left span {
+  color: #03a2fc;
+  margin-left: 10px;
+}
+.content .car_detail_1 .car_rate .car_rate_right {
+  float: right;
+  font-size: 14px;
+  padding-right: 20px;
+  position: relative;
+}
+.content .car_detail_1 .car_rate .car_rate_right:after {
+  width: 10px;
+  height: 18px;
+  content: '';
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  right: 0;
+  background: url("../../../images/weixin/bid/icon_arrow_next_gray.png") no-repeat center;
+  -webkit-background-size: 100%;
+  background-size: 100%;
+}
+.content .car_detail_1 .bid_car_report .report_bb {
+  font-size: 14px;
+  color: #393939;
+}
+.content .car_detail_1 .bid_car_report li {
+  overflow: hidden;
+  padding: 10px 10px;
+  border-bottom: 1px solid #eeeeee;
+  font-size: 14px;
+}
+.content .car_detail_1 .bid_car_report li .report_left {
+  float: left;
+  width: 25%;
+  color: #b2b2b2;
+}
+.content .car_detail_1 .bid_car_report li .report_right {
+  float: right;
+  max-width: 70%;
+}
+.content .car_detail_1 .bid_car_report_1 li {
+  overflow: hidden;
+  padding: 10px 10px;
+  border-bottom: 1px solid #eeeeee;
+  font-size: 14px;
+}
+.content .car_detail_1 .bid_car_report_1 li .report_left {
+  float: left;
+  width: 25%;
+  color: #b2b2b2;
+}
+.content .car_detail_1 .bid_car_report_1 li .report_right {
+  float: right;
+  width: 70%;
+  text-align: left;
+}
+.content .car_damage {
+  height: 40px;
+  line-height: 40px;
+  background-color: #f3f3ee;
+  padding: 0 10px;
+}
+.content .car_damage .car_damage_left {
+  float: left;
+  font-size: 14px;
+  color: #393939;
+  position: relative;
+  padding-left: 15px;
+}
+.content .car_damage .car_damage_left:before {
+  content: '';
+  position: absolute;
+  top: 13px;
+  left: 5px;
+  width: 4px;
+  height: 15px;
+  background-color: #03a2fc;
+  border-radius: 2px;
+}
+.content .car_damage .car_damage_left span {
+  color: #03a2fc;
+}
+.content .car_damage .car_damage_right {
+  float: right;
+  font-size: 14px;
+  padding-right: 20px;
+  position: relative;
+}
+.content .car_damage .car_damage_right:after {
+  width: 10px;
+  height: 18px;
+  content: '';
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  right: 0;
+  background: url("../../../images/weixin/bid/icon_arrow_next_gray.png") no-repeat center;
+  -webkit-background-size: 100%;
+  background-size: 100%;
+}
+.content .car_damage_detail {
+  background-color: #ffffff;
+  padding-bottom: 16px;
+}
+.content .car_damage_detail li {
+  width: 50%;
+  float: left;
+  overflow: hidden;
+  margin-top: 16px;
+  padding-left: 10px;
+}
+.content .car_damage_detail li .damage_1 {
+  font-size: 13px;
+  color: #8d8d8d;
+  float: left;
+}
+.content .car_damage_detail li .damage_1 span {
+  color: #000;
+}
+.content .car_damage_detail li .damage_2 {
+  float: left;
+}
+.content .car_damage_detail li .damage_2 i {
+  width: 16px ;
+  height: 12px ;
+  display: inline-block;
+  margin: 0 2px 0 10px;
+  background: url("../../../images/weixin/bid/img_no.jpg") no-repeat center;
+  background-size: 100%;
+}
+.content .car_damage_detail li .damage_2 span {
+  font-size: 13px;
+  color: #8d8d8d;
+}
+.content .car_damage_detail li .has_img i {
+  background: url("../../../images/weixin/bid/img_has.png") no-repeat center;
+  background-size: 100%;
+}
+.content .car_damage_detail li .has_img span {
+  color: #03a2fc;
+}
+.content .byjl_box {
+  height: 40px;
+  line-height: 40px;
+  background-color: #f3f3ee;
+  padding: 0 10px;
+}
+.content .byjl_box .car_rate_left {
+  float: left;
+  font-size: 14px;
+  color: #393939;
+  padding-left: 15px;
+  position: relative;
+}
+.content .byjl_box .car_rate_left:before {
+  content: '';
+  position: absolute;
+  top: 13px;
+  left: 5px;
+  width: 4px;
+  height: 15px;
+  background-color: #03a2fc;
+  border-radius: 2px;
+}
+.content .byjl_box .car_rate_left span {
+  color: #03a2fc;
+  margin-left: 10px;
+}
+.content .byjl_box .car_rate_right {
+  float: right;
+  font-size: 14px;
+  padding-right: 20px;
+  position: relative;
+}
+.content .byjl_box .car_rate_right:after {
+  width: 10px;
+  height: 18px;
+  content: '';
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  right: 0;
+  background: url("../../../images/weixin/bid/icon_arrow_next_gray.png") no-repeat center;
+  -webkit-background-size: 100%;
+  background-size: 100%;
+}
+.content .byjl_detail {
+  background-color: #ffffff;
+  padding: 10px 20px;
+  font-size: 14px;
+  color: #8d8d8d;
+}
+.content .bid_input {
+  position: fixed;
+  left: 50%;
+  margin-left: -3.75rem;
+  bottom: 0;
+  width: 7.5rem;
+  height: 48px;
+  box-shadow: 0 -5px 9px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 -5px 9px rgba(0, 0, 0, 0.1);
+}
+.content .bid_input > div {
+  width: 7.5rem;
+  height: 48px;
+  position: relative;
+}
+.content .bid_input > div input {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 66%;
+  font-size: 14px;
+  height: 48px;
+  padding: 10px;
+  display: block;
+}
+.content .bid_input > div a {
+  position: absolute;
+  top: 0;
+  left: 66%;
+  height: 48px;
+  margin-left: 0;
+  width: 34%;
+  background-color: #f03f5a;
+  line-height: 48px;
+  font-size: 16px;
+  color: #ffffff;
+  text-indent: 15%;
+}
+.content .bid_input > div a:after {
+  content: '';
+  position: absolute;
+  top: 15px;
+  left: 20%;
+  width: 18px;
+  height: 18px;
+  background: url("../../../images/weixin/bid/icon_jinpai_whte.png") no-repeat center;
+  background-size: 100%;
+}
+.content .bid_finish {
+  position: fixed;
+  left: 50%;
+  margin-left: -3.75rem;
+  bottom: 0;
+  width: 7.5rem;
+  height: 48px;
+  background: rgba(0, 0, 0, 0.6);
+  display: none;
+}
+.content .bid_finish > div {
+  color: #ffffff;
+  font-size: 18px;
+  line-height: 48px;
+  text-align: center;
+}
+.content .bid_sub_bg {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 100;
+  display: none;
+}
+.content .bid_sub_bg .bid_sub_box {
+  width: 80%;
+  background-color: #ffffff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  border-radius: 8px;
+}
+.content .bid_sub_bg .bid_sub_box .bid_sub_title {
+  height: 46px;
+  line-height: 46px;
+  font-size: 16px;
+  color: #393939;
+  text-align: center;
+  border-bottom: 1px solid #EEEEEE;
+}
+.content .bid_sub_bg .bid_sub_box .bid_sub_money {
+  margin-top: 15px;
+  text-align: center;
+}
+.content .bid_sub_bg .bid_sub_box .bid_sub_money .bid_sub_text {
+  font-size: 16px;
+  color: #7a7a7a;
+}
+.content .bid_sub_bg .bid_sub_box .bid_sub_money .bid_sub_money_2 {
+  font-size: 24px;
+  color: #fa3e5d;
+  width: 80%;
+  margin: 0 auto;
+}
+.content .bid_sub_bg .bid_sub_box .bid_sub_sure {
+  font-size: 18px;
+  color: #393939;
+  text-align: center;
+  margin: 23px 0 15px;
+}
+.content .bid_sub_bg .bid_sub_box .bid_sub_a {
+  border-top: 1px solid #EEEEEE;
+  overflow: hidden;
+}
+.content .bid_sub_bg .bid_sub_box .bid_sub_a a {
+  float: left;
+  width: 50%;
+  font-size: 16px;
+  line-height: 45px;
+  text-align: center;
+}
+.content .bid_sub_bg .bid_sub_box .bid_sub_a .bid_cancel {
+  color: #7a7a7a;
+  border-right: 1px solid #EEEEEE;
+}
+.content .bid_sub_bg .bid_sub_box .bid_sub_a .bid_sure {
+  color: #03a2fc;
+}
+.error_bg {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 10000;
+  display: none;
+}
+.error_bg .error_text {
+  font-size: 16px;
+  background: #000000;
+  white-space: nowrap;
+  color: #ffffff;
+  border-radius: 4px;
+  padding: 5px 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}

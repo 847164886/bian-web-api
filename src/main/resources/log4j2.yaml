@@ -1,0 +1,37 @@
+Configuration:
+  status: info
+  monitorInterval: 1800
+
+  Properties:
+    Property:
+      -
+        name: LOG_HOME
+        value: "/usr/local/jetty/logs"
+      -
+        name: BACKUP_HOME
+        value: "${LOG_HOME}/backup"
+      -
+        name: STAT_NAME
+        value: stat
+      -
+        name: SERVER_NAME
+        value: csjpapp
+
+  Appenders:
+    RollingRandomAccessFile:
+      name: ProductLog
+      fileName: "${LOG_HOME}/${SERVER_NAME}"
+      filePattern: "${LOG_HOME}/${SERVER_NAME}.%d{yyyy-MM-dd}.log"
+      PatternLayout:
+        charset: "UTF-8"
+        pattern: "%date{yyyy-MM-dd HH:mm:ss.SSS} %level [%thread][%file:%line] - %msg%n"
+      Policies:
+        TimeBasedTriggeringPolicy:
+          interval: 1
+          modulate: true
+
+  Loggers:
+    Root:
+      level: INFO
+      AppenderRef:
+        ref: ProductLog

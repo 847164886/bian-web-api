@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="telephone=no, address=no" name="format-detection">
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <link rel="stylesheet" type="text/css" href="${cssPath}/reset.css"/>
+    <link rel="stylesheet" type="text/css" href="${cssPath}/weixin/bid/car_source.css"/>
+    <title>车源发布</title>
+    <script>!function (a, b) { var c = document.documentElement, d = "orientationchange" in window ? "orientationchange" : "resize", e = function () { var a = c.clientWidth; a > 750 && (a = 750); c.style.fontSize = 100 * (a / 750) + "px" }; e(); a.addEventListener && b.addEventListener(d, e, !1) }(document, window);</script>
+</head>
+<body>
+<div class="content">
+    <div class="top_title top_title_grey">
+        <a class="title_tt">发布车源</a>
+    </div>
+    <div class="info-box">
+        <div class="info-list userName">
+            <span class="must">姓名</span>
+            <input id="userName" maxlength="10" type="text" placeholder="请输入您的姓名"/>
+        </div>
+        <div class="info-list userMobile">
+            <span class="must">手机</span>
+            <input id="userMobile" maxlength="11" type="text" placeholder="请输入您的手机号码"/>
+        </div>
+        <div class="info-list carType">
+            <span>车型</span>
+            <input id="carType" type="text" placeholder="车型车辆（例：奥迪A6L）"/>
+        </div>
+        <div class="info-list userSex">
+            <span>性别</span>
+            <p id="sex_sel">
+                <em class="girls sel">女</em>
+                <em class="boys">男</em>
+            </p>
+        </div>
+        <div class="info-list userCity">
+            <span class="must">城市</span>
+            <p id="city">请选择城市<b></b></p>
+        </div>
+        <div class="info-list userPrice">
+            <span class="infoprice">信息费</span>
+            <input id="userPrice" maxlength="8" class="price" type="text" placeholder="请输入金额"/>元
+            <b id="show_suggestion"></b>
+        </div>
+    </div>
+    <div class="confirm-box">
+        <a id="commit">提交车源信息</a>
+    </div>
+    <div class="mask">
+        <div class="price-suggest">
+            <p class="title">
+                建议信息费设置区间（参考卖车价格）
+            </p>
+            <div class="detail">
+                <p>
+                    <span class="price-section">20万以下</span>
+                    <span class="etc"></span>
+                    <span class="price-sug">1500元</span>
+                </p>
+                <p>
+                    <span class="price-section">20-30万</span>
+                    <span class="etc"></span>
+                    <span class="price-sug">2000元</span>
+                </p>
+                <p>
+                    <span class="price-section">30-40万</span>
+                    <span class="etc"></span>
+                    <span class="price-sug">2500元</span>
+                </p>
+                <p>
+                    <span class="price-section">40-50万</span>
+                    <span class="etc"></span>
+                    <span class="price-sug">3000元</span>
+                </p>
+                <p>
+                    <span class="price-section">50-60万</span>
+                    <span class="etc"></span>
+                    <span class="price-sug">3500元</span>
+                </p>
+                <p>
+                    <span class="price-section">60-70万</span>
+                    <span class="etc"></span>
+                    <span class="price-sug">4000元</span>
+                </p>
+                <p>
+                    <span class="price-section">70-80万</span>
+                    <span class="etc"></span>
+                    <span class="price-sug">4500元</span>
+                </p>
+                <p>
+                    <span class="price-section">80万以上</span>
+                    <span class="etc"></span>
+                    <span class="price-sug">6666元</span>
+                </p>
+            </div>
+            <div class="close"></div>
+        </div>
+    </div>
+    <div class="error">
+        <div class="error-box">
+           <span id="err_msg"></span>
+        </div>
+    </div>
+    <div class="car_city" id="choose_city">
+        <div id="province_choose" class="choose_del">
+            <div class="brand_back">
+                <a class="brand_back_a" id="sheng_close"></a>
+
+                <div class="back_center">选择省份</div>
+            </div>
+            <div id="province_choose_content" class="choose_del_con"></div>
+        </div>
+        <div id="city_choose" class="choose_del" style="display: none;">
+            <div class="brand_back">
+                <a class="brand_back_a" id="city_close"></a>
+                <div class="back_center">选择城市</div>
+            </div>
+            <div class="choose_del_con" id="city_choose_content"></div>
+        </div>
+    </div>
+    #parse("./common/footer.html")
+</div>
+<script type="text/javascript" src="$!{jsPath}/zepto.js"></script>
+<script src="$!jsPath/weixin/bid/car_source.js"></script>
+</body>
+</html>
