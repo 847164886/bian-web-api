@@ -15,7 +15,7 @@
 		<servlet.version>3.1.0</servlet.version>
 		<cglib.version>3.1</cglib.version>
 		<guava.version>18.0</guava.version>
-		<jackson.version>2.6.1</jackson.version>
+		<jackson.version>2.11.0</jackson.version>
 		<jackson.asl.version>1.9.13</jackson.asl.version>
 		<httpcomponents.version>4.5</httpcomponents.version>
 		<httpcomponents.httpcore.version>4.4.2</httpcomponents.httpcore.version>
