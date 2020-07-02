@@ -34,7 +34,7 @@
 		<mybatis.spring.version>1.2.3</mybatis.spring.version>
 		<mybatis.version>3.3.0</mybatis.version>
 		<fastjson.version>1.2.6</fastjson.version>
-		<mysql.version>5.1.36</mysql.version>
+		<mysql.version>8.0.16</mysql.version>
 		<mockito.version>1.9.5</mockito.version>
 		<json.path.version>0.9.1</json.path.version>
 		<jstl.version>1.2</jstl.version>
