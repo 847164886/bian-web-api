@@ -42,7 +42,7 @@
 		<commons.lang.version>2.6</commons.lang.version>
 		<aspectjweaver.version>1.8.1</aspectjweaver.version>
 		<commons.fileupload.version>1.3.1</commons.fileupload.version>
-		<commons.io.version>2.4</commons.io.version>
+		<commons.io.version>2.7</commons.io.version>
 		<commons.httpclient.version>3.1</commons.httpclient.version>
 		<ehcache.version>2.6.9</ehcache.version>
 		<maven.war.plugin.version>2.6</maven.war.plugin.version>
