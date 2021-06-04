@@ -17,7 +17,7 @@
 		<guava.version>18.0</guava.version>
 		<jackson.version>2.6.1</jackson.version>
 		<jackson.asl.version>1.9.13</jackson.asl.version>
-		<httpcomponents.version>4.5</httpcomponents.version>
+		<httpcomponents.version>4.5.13</httpcomponents.version>
 		<httpcomponents.httpcore.version>4.4.2</httpcomponents.httpcore.version>
 		<lombok.version>1.16.6</lombok.version>
 		<fyopenapi.version>1.0</fyopenapi.version>
