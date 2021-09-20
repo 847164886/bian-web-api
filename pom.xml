@@ -29,7 +29,7 @@
 		<servlet.jsp.jstl.api.version>1.2.1</servlet.jsp.jstl.api.version>
 		<spring.data.redis.version>1.5.2.RELEASE</spring.data.redis.version>
 		<druid.version>1.0.2</druid.version>
-		<shiro.version>1.2.4</shiro.version>
+		<shiro.version>1.8.0</shiro.version>
 		<shiro.redis.version>2.4.2.1-RELEASE</shiro.redis.version>
 		<mybatis.spring.version>1.2.3</mybatis.spring.version>
 		<mybatis.version>3.3.0</mybatis.version>
