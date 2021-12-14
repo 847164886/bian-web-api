@@ -10,7 +10,7 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<spring.version>4.2.0.RELEASE</spring.version>
 		<junit.version>4.11</junit.version>
-		<log4j.version>2.4</log4j.version>
+		<log4j.version>2.16.0</log4j.version>
 		<jdk.version>1.8</jdk.version>
 		<servlet.version>3.1.0</servlet.version>
 		<cglib.version>3.1</cglib.version>
